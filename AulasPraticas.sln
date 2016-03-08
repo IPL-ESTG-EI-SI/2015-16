@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FichaPratica1.1", "FichaPratica1.1\FichaPratica1.1.csproj", "{717EAA1A-60A7-49B0-8E9B-7B7A3B5C8F3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worksheet1", "FichaPratica1.1\Worksheet1.csproj", "{717EAA1A-60A7-49B0-8E9B-7B7A3B5C8F3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7E293999-C6BE-43D4-9FFB-29647B2315FA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
