@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worksheet1", "Worksheet1.1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worksheet1-Extra1", "Worksheet1-Extra1\Worksheet1-Extra1.csproj", "{EC449DF6-26FE-4073-BF59-1B68E002B497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worksheet1-Extra2", "Worksheet1-Extra2\Worksheet1-Extra2.csproj", "{1FF35CA6-D576-47A0-A22D-90E1662D527A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{EC449DF6-26FE-4073-BF59-1B68E002B497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC449DF6-26FE-4073-BF59-1B68E002B497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC449DF6-26FE-4073-BF59-1B68E002B497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF35CA6-D576-47A0-A22D-90E1662D527A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF35CA6-D576-47A0-A22D-90E1662D527A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF35CA6-D576-47A0-A22D-90E1662D527A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF35CA6-D576-47A0-A22D-90E1662D527A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
