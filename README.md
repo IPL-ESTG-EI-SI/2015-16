@@ -9,3 +9,6 @@ Normally projects will be added to this repo one week after the release of the e
 
 ### Worksheet 1
 The Project Worksheet1 refers to exercise 1, points 1 and 2.a. To run make sure is defined as the starting project and hit Start.
+
+### Worksheet 1 Extra
+The Project Worksheet1-Extra1 refers to exercise 1 2.a (Extra). To run make sure is defined as the starting project and hit Start.
