@@ -48,7 +48,7 @@ namespace Worksheet1_2_Client
 
             stream.Close();
             client.Close();
-            Console.WriteLine("Server Stoped");
+            Console.WriteLine("Client Stoped");
             Console.ReadKey();
         }
     }
