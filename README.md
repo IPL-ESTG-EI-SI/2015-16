@@ -26,6 +26,10 @@ The Project Worksheet1-Extra2 refers to exercise 1 2.c (Extra). To run make sure
 For exercise 2 of worksheet 1 there are two projects - Worksheet1-2-Client, Worksheet1-2-Server.
 In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
 
+### Worksheet 1 - 2 Extra
+For exercise 2 of worksheet 1 there are two projects - Worksheet1-2-Extra-Client, Worksheet1-2-Extra-Server.
+In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
+
 ### Worksheet 1 - 3
 For exercise 3 of worksheet 1 there are two projects - Worksheet1-3-Client, Worksheet1-3-Server.
 In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
