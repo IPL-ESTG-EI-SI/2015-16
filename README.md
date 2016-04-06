@@ -41,3 +41,24 @@ For exercise 3 Extra of worksheet 1 there are three projects - Worksheet1-3-Clie
 In order to run you need to define all projects are to start when debugging (Server -> MITM -> Client) or start them manually
 Also there's a folder for a lib (dll) needed, called ProtocolSI.
 
+### Worksheet 2 / Exercise 1.1
+The Project Worksheet2 refers to exercise 1, point 1. To run make sure is defined as the starting project and hit Start.
+
+
+### Worksheet 2 / Exercise 1.2
+The Project Worksheet2 refers to exercise 1, point 2. To run make sure is defined as the starting project and hit Start.
+
+### Worksheet 2 / Exercise 2.1
+For exercise 2.1 of worksheet 2 there are two projects - Exercise2.1.Client, Exercise2.1.Server.
+In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
+Also there's a folder for two libs (dll) needed, called ProtocolSI and SymmetricsSI.
+
+
+### Worksheet 2 / Exercise 2.2
+For exercise 2.2 of worksheet 2 there are two projects - Exercise2.1.Client, Exercise2.1.Server.
+In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
+Also there's a folder for two libs (dll) needed, called ProtocolSI and SymmetricsSI.
+
+### Worksheet 2 Extras
+Inside this folder (solution folder) are the projects for the points refered to as EXTRA in the worksheets.
+
