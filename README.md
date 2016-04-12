@@ -62,3 +62,17 @@ Also there's a folder for two libs (dll) needed, called ProtocolSI and Symmetric
 ### Worksheet 2 Extras
 Inside this folder (solution folder) are the projects for the points refered to as EXTRA in the worksheets.
 
+### Worksheet 3 / Exercise 1
+The Project Worksheet3 refers to exercise 1, point 1. To run make sure is defined as the starting project and hit Start.
+
+
+### Worksheet 3 / Exercise 2.1
+For exercise 2.1 of worksheet 3 there are two projects - Exercise2.1.Client, Exercise2.1.Server.
+In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
+Also there's a folder for two libs (dll) needed, called ProtocolSI and SymmetricsSI.
+
+
+### Worksheet 3 / Exercise 2.2
+For exercise 2.2 of worksheet 3 there are two projects - Exercise2.1.Client, Exercise2.1.Server.
+In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
+Also there's a folder for two libs (dll) needed, called ProtocolSI and SymmetricsSI.
