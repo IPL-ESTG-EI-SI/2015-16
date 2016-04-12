@@ -76,3 +76,20 @@ Also there's a folder for two libs (dll) needed, called ProtocolSI and Symmetric
 For exercise 2.2 of worksheet 3 there are two projects - Exercise2.1.Client, Exercise2.1.Server.
 In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
 Also there's a folder for two libs (dll) needed, called ProtocolSI and SymmetricsSI.
+
+
+### Worksheet 4 / Exercise 1.1
+The Project Worksheet4 refers to exercise 1, point 1. To run make sure is defined as the starting project and hit Start.
+
+### Worksheet 4 / Exercise 1.2
+The Project Worksheet4 refers to exercise 1, point 2. To run make sure is defined as the starting project and hit Start.
+
+### Worksheet 4 / Exercise 2.1
+The Project Worksheet4 refers to exercise 2, point 1. To run make sure is defined as the starting project and hit Start.
+
+
+### Worksheet 4 / Exercise 2.2
+For exercise 2.2 of worksheet 4 there are two projects - Exercise2.2.Client, Exercise2.2.Server.
+In order to run you need to define that both projects are to start when debugging (Server first) or start them manually
+Also there's a folder for two libs (dll) needed, called ProtocolSI and SymmetricsSI.
+
