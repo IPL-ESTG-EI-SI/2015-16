@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1871/AuthService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1871/AuthService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1871/AuthService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuthService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthService_GetExemplo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExemplo" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetExemplo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExemploResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetUserDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDescription" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetUserDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_SetUserDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserDescription" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_SetUserDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetUsersByCertificate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByCertificate" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_GetUsersByCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByCertificateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_SetUserCertificate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserCertificate" />
+  </wsdl:message>
+  <wsdl:message name="IAuthService_SetUserCertificate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserCertificateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthService">
+    <wsdl:operation name="GetExemplo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthService/GetExemplo" message="tns:IAuthService_GetExemplo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthService/GetExemploResponse" message="tns:IAuthService_GetExemplo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthService/GetUserDescription" message="tns:IAuthService_GetUserDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthService/GetUserDescriptionResponse" message="tns:IAuthService_GetUserDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthService/SetUserDescription" message="tns:IAuthService_SetUserDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthService/SetUserDescriptionResponse" message="tns:IAuthService_SetUserDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthService/GetUsers" message="tns:IAuthService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthService/GetUsersResponse" message="tns:IAuthService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByCertificate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthService/GetUsersByCertificate" message="tns:IAuthService_GetUsersByCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthService/GetUsersByCertificateResponse" message="tns:IAuthService_GetUsersByCertificate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCertificate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthService/SetUserCertificate" message="tns:IAuthService_SetUserCertificate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthService/SetUserCertificateResponse" message="tns:IAuthService_SetUserCertificate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAuthService" type="tns:IAuthService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetExemplo">
+      <soap:operation soapAction="http://tempuri.org/IAuthService/GetExemplo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDescription">
+      <soap:operation soapAction="http://tempuri.org/IAuthService/GetUserDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserDescription">
+      <soap:operation soapAction="http://tempuri.org/IAuthService/SetUserDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IAuthService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByCertificate">
+      <soap:operation soapAction="http://tempuri.org/IAuthService/GetUsersByCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCertificate">
+      <soap:operation soapAction="http://tempuri.org/IAuthService/SetUserCertificate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthService">
+    <wsdl:port name="BasicHttpBinding_IAuthService" binding="tns:BasicHttpBinding_IAuthService">
+      <soap:address location="http://localhost:1871/AuthService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

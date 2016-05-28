@@ -1,0 +1,153 @@
+############################ Class Field ###############################################
+// Card Reader
+private SCWatcher _scWatcher = null;
+		
+
+###################################### Form1_Shown ##################################################
+// Init Card Reader
+try
+{
+	lblStatus.Text = "initializing the card reader...";
+	ScWatcher_Init();
+
+	//this._ccPT = new CitizenCardPT(this._scWatcher);
+
+	lblStatus.Text += " OK.";
+}
+catch
+{
+	lblStatus.Text = "Erro ao iniciar o leitor de cartões!";
+}
+
+########################################## Form1_FormClosing ###############################################
+// free the card reader
+ScWatcher_Stop();
+
+
+
+
+################################# Region at the end of the document #####################################
+
+#region CartaoDeCidadao Code
+
+/// <summary>
+/// Read the Citizen ID data and sets the class properties
+/// </summary>
+public void CC_Read_And_Show_Info()
+{
+	// Public Citizen Identity Data   
+	Id citizen = EIDPT.GetID();
+
+	txtIdNumber.Text = citizen.BI;
+	//... code
+
+
+}
+
+/// <summary>
+/// Only Reads the photo, set's the class properties and returns the photo
+/// </summary>
+/// <returns>Citizen photo</returns>
+public Image CC_Read_Photo()
+{
+	MemoryStream ms = null;
+	try
+	{
+		Picture picture = EIDPT.GetPicture();
+		ms = new MemoryStream(picture.Bytes, 0, picture.BytesLength, false);
+		// JPEG2000 Support provided by CSJ2K (http://csj2k.codeplex.com/)
+		Image tempImage = CSJ2K.J2kImage.FromStream(ms);
+		return tempImage;
+	}
+	finally
+	{
+		ms.Close();
+	}
+}
+#endregion
+
+
+
+#region Card Reader Code
+// Manage
+private void ScWatcher_Init()
+{
+	this._scWatcher = SCWatcher.GetInstance(); // Daemon starts when instantiated
+	this._scWatcher.CardInserted += new SCWatcher.CardInsertedHandler(ScWatcher_CardInserted);
+	this._scWatcher.CardRemoved += new SCWatcher.CardRemovedHandler(ScWatcher_CardRemoved);
+	this._scWatcher.ReaderInserted += new SCWatcher.ReaderInsertedHandler(ScWatcher_ReaderInserted);
+	this._scWatcher.ReaderRemoved += new SCWatcher.ReaderRemovedHandler(ScWatcher_ReaderRemoved);
+}
+
+/// <summary>
+/// 
+/// </summary>
+private void ScWatcher_Stop()
+{
+	if (this._scWatcher != null)
+		this._scWatcher.Stop();
+}
+
+// Events(only for UI update)
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="readerName"></param>
+/// <param name="cardName"></param>
+void ScWatcher_CardInserted(string readerName, string cardName)
+{
+	try
+	{
+		EIDPT.Init(readerName);
+		EIDPT.SetSODChecking(false);
+	}
+	catch
+	{
+		EIDPT.Exit(ExitMode.LEAVE_CARD);
+		return;
+	}
+
+	lblStatus.Text = "Card Inserted.";
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="readerName"></param>
+void ScWatcher_CardRemoved(string readerName)
+{
+	EIDPT.Exit(ExitMode.LEAVE_CARD);
+	lblStatus.Text = "Card Removed.";
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="readerName"></param>
+void ScWatcher_ReaderInserted(string readerName)
+{
+	lblStatus.Text = "Card Reader Inserted: " + readerName;
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="readerName"></param>
+void ScWatcher_ReaderRemoved(string readerName)
+{
+	EIDPT.Exit(ExitMode.LEAVE_CARD);
+	lblStatus.Text = "Card Reader Removed:" + readerName;
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="errorCode"></param>
+/// <param name="errorMessage"></param>
+void ScWatcher_OnError(int errorCode, string errorMessage)
+{
+}
+#endregion
+
+
